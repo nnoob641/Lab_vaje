@@ -1,2 +1,2 @@
-# Lab_vaje
-This is test
+# Computer Labaratory exercises
+These are exercises from our computer science course
