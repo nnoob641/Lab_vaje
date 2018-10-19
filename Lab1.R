@@ -79,4 +79,29 @@ cut(num,5)
 x <- data.frame(q=c(2, 4, 6), p=c("a", "b", "c"))
 x[2] <- c("fertiliser1", "fertiliser2", "fertiliser3")
 
+# Subsetting.txt
+
+#1)
+mtcars[,1][mtcars[,1]>15.0]
+
+#2)
+mtcars[,1][mtcars[,1]>=21]
+
+#3)
+mtcars[mtcars$cyl<6 & mtcars$gear==4,c(2,10)]
+
+#4)
+mtcars[mtcars$mpg>=21,1:4]
+
+#5)
+head(airquality[airquality$Ozone>28 | airquality$Temp > 70, 1:5],5)
+
+#6)
+head(airquality[airquality$Ozone>28 | airquality$Temp > 70,c(1,4)],5)
+
+#7)
+head(CO2[CO2$Treatment=="chilled" & CO2$uptake > 15,-c(4)],10)
+
+#8)
+airquality[airquality$Ozone > 100, c("Ozone","Temp","Month","Day")]
 
