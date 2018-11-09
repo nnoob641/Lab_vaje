@@ -105,3 +105,21 @@ head(CO2[CO2$Treatment=="chilled" & CO2$uptake > 15,-c(4)],10)
 #8)
 airquality[airquality$Ozone > 100, c("Ozone","Temp","Month","Day")]
 
+#---------- PerformanceAnalytics -------------
+install.packages("PerformanceAnalytics")
+df <- airquality[,1:4]
+library(PerformanceAnalytics)
+chart.Correlation(df,histogram = T,pch = "+")
+
+#-----------LOOPS----------
+i <- 1
+
+repeat{
+     i <- i+1
+     if(i%%2==0){
+         print(i)
+     }
+     if(i==10){
+         break
+     }
+ }
