@@ -122,4 +122,55 @@ repeat{
      if(i==10){
          break
      }
- }
+}
+
+hflights::hflights$DayofMonth
+
+select(hflights,UniqueCarrier,FlightNum,contains("Tail"),contains("Cancel"))
+
+#------------FUNCTIONS--------
+
+apply(airquality, 2,function(x) mean(x,na.rm = TRUE))
+
+l <- list(a=1:10,b=3:17,c=30:35)
+
+lapply(l,mean)
+
+d <- sapply(l,mean)
+class(d)
+
+tapply(airquality$Temp, airquality$Month, mean)
+
+lapply(mtcars, min)
+
+mapply(min,mtcars)
+
+sapply(mtcars, min)
+
+lapply(mtcars, min)
+
+listobjects <- list(mapply(min,mtcars),sapply(mtcars, min),lapply(mtcars, min))
+
+mapply(class, listobjects)
+
+
+isINT <- function(v,i) {a <- table(v) ; b <- a[names(a)==i] ; as.integer(b)}
+isINT(c(1,2,3,1,2,1,2,3,4,5,1),1)
+
+sq <- function(x) x*x
+
+raise <- function(x,y=3) x+y
+
+divisors <- function(x) {
+  count <- 0
+  if(x==1){count <- 0}
+  else{for (i in c(2:(x-1))) {
+    if(x%%i==0){count <- count +1}
+  }}
+  count
+}
+
+
+
+
+
